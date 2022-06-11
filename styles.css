@@ -10,6 +10,10 @@ body {
   color: #FEF2BF;
 }
 
+#here {
+  text-decoration: underline;
+}
+
 .container {
   display: block;
   width: 50%;
@@ -52,6 +56,7 @@ body {
   background-color: grey;
 }
 
+
 @media (max-width: 1000px){
 .btn {
   margin: 25px;
@@ -61,6 +66,10 @@ body {
   width: 150px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+#level-title {
+  line-height: 2.5;
 }
 
 }
