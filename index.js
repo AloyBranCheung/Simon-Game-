@@ -88,7 +88,7 @@ $(".btn").click(function(){
         var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
         playSound(userChosenColour);
-        animatePress(userChosenColour);
+        $("#"+randomChosenColour).fadeIn(100).fadeOut(150).fadeIn(100);
         checkAnswer(userClickedPattern.length-1);
     }
 });
@@ -99,7 +99,7 @@ $("#here").on("click", function(){
     if (!started) {
         $("#level-title").text("Level " + level); 
         nextSequence();
-        animatePress(randomChosenColour);
+        $("#"+randomChosenColour).fadeIn(100).fadeOut(150).fadeIn(100);
         playSound(randomChosenColour);
         started = true;
     }
