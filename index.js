@@ -61,12 +61,12 @@ function checkAnswer(currentLevel){
             replayGamePattern();
         }
     } else {
-        console.log("failure");
         playSound("wrong");
         $("body").addClass("game-over");
-        $("#level-title").html("Game Over :(. Press any key to restart.");
+        $("#level-title").html("Game Over :(. Press any key or <span id='here'><em>here</em></span> to restart.");
         setTimeout(function(){$("body").removeClass("game-over")}, 200);
         startOver();
+        clickHere();
     }
 }
 
@@ -94,13 +94,17 @@ $(".btn").click(function(){
 });
 
 
+function clickHere(){
+    $("#here").on("click", function(){
+        if (!started) {
+            $("#level-title").text("Level " + level); 
+            nextSequence();
+            $("#"+randomChosenColour).fadeIn(100).fadeOut(150).fadeIn(100);
+            playSound(randomChosenColour);
+            started = true;
+        }
+    });    
+}
 
-$("#here").on("click", function(){
-    if (!started) {
-        $("#level-title").text("Level " + level); 
-        nextSequence();
-        $("#"+randomChosenColour).fadeIn(100).fadeOut(150).fadeIn(100);
-        playSound(randomChosenColour);
-        started = true;
-    }
-});
+clickHere();
+

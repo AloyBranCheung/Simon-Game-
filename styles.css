@@ -8,6 +8,7 @@ body {
   font-size: 3rem;
   margin:  5%;
   color: #FEF2BF;
+  line-height: 2;
 }
 
 #here {
@@ -15,7 +16,7 @@ body {
 }
 
 .container {
-  display: block;
+  display: inline;
   width: 50%;
   margin: auto;
 
@@ -56,20 +57,3 @@ body {
   background-color: grey;
 }
 
-
-@media (max-width: 1000px){
-.btn {
-  margin: 25px;
-  margin-top: 60px;
-  display: inline-block;
-  height: 150px;
-  width: 150px;
-  border: 10px solid black;
-  border-radius: 20%;
-}
-
-#level-title {
-  line-height: 2.5;
-}
-
-}
