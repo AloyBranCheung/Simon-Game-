@@ -99,7 +99,7 @@ $("#here").on("click", function(){
     if (!started) {
         $("#level-title").text("Level " + level); 
         nextSequence();
-        $("#here').fadeIn(100).fadeOut(150).fadeIn(100);
+        $("#"+gamePattern[0]).fadeIn(100).fadeOut(150).fadeIn(100);
         playSound(randomChosenColour);
         started = true;
     }
